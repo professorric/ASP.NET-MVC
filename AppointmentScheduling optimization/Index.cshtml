@@ -1,0 +1,36 @@
+﻿@model List<AppointmentScheduling.Models.Appointment>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scheduled Appointments</title>
+</head>
+<body>
+    <h1>Appointments</h1>
+    <table>
+        <tr>
+            <th>Patient</th>
+            <th>Doctor</th>
+            <th>Time</th>
+        </tr>
+        @foreach (var appointment in Model)
+        {
+            <tr>
+                <td>@appointment.Patient.Name</td>
+                <td>@appointment.Doctor.Name</td>
+                <td>@appointment.ScheduledTime</td>
+            </tr>
+        }
+    </table>
+
+    <h2>Schedule New Patient</h2>
+    <form method="post" asp-action="Schedule">
+        <label>Name:</label>
+        <input type="text" name="Name" required />
+        <label>Arrival Time:</label>
+        <input type="datetime-local" name="ArrivalTime" required />
+        <button type="submit">Schedule</button>
+    </form>
+
+</body>
+</html>
