@@ -1,0 +1,58 @@
+                                                Appointment Scheduling Optimization
+
+Introduction
+
+The Appointment Scheduling System is a web application designed to manage and schedule appointments with doctors. The system allows 
+patients to select available time slots for appointments, ensuring that appointments are scheduled within the current month and on valid dates. 
+It also handles error messages and provides feedback to users when necessary.
+
+This system is built using ASP.NET Core MVC, leveraging models, controllers, views, and error handling mechanisms to provide 
+a smooth scheduling experience for users.
+
+Logic
+
+The core logic of the Appointment Scheduling System revolves around:
+
+1. Doctor Availability: Doctors have predefined available time slots from 8:00 AM to 5:00 PM each day within the current month.
+2. Patient Scheduling: Patients can only schedule appointments within the current month, starting from the current date and 
+extending to the last day of the month.
+3. Slot Selection: The system checks available slots for each doctor, ensuring that appointments are only scheduled within the available times.
+4. Error Handling: If a user attempts to schedule an appointment outside of the allowed range or if no available slots are found,
+an error message is displayed.
+
+Models
+The system uses the following models:
+
+Model 1: Patient
+Represents a patient requesting an appointment.
+
+Id: Unique identifier for the patient.
+Name: The patient's name.
+ArrivalTime: The desired date and time for the appointment.
+
+Model 2: Doctor
+Represents a doctor with available time slots.
+
+Id: Unique identifier for the doctor.
+Name: The doctor's name (e.g., Dr. Cedric, Dr. Merwin).
+AvailableSlots: A list of DateTime objects representing available time slots for the doctor.
+
+Model 3: Appointment
+Represents an appointment that has been successfully scheduled.
+
+Id: Unique identifier for the appointment.
+Patient: The patient associated with the appointment.
+Doctor: The doctor who will attend to the patient.
+ScheduledTime: The scheduled date and time of the appointment.
+
+Model 4: ErrorViewModel
+Represents the error view model used for displaying error messages.
+
+ErrorMessage: A string containing the error message.
+RequestId: An optional string representing the request ID for debugging purposes.
+
+
+
+
+
+
