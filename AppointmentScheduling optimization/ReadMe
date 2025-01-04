@@ -9,6 +9,7 @@ It also handles error messages and provides feedback to users when necessary.
 This system is built using ASP.NET Core MVC, leveraging models, controllers, views, and error handling mechanisms to provide 
 a smooth scheduling experience for users.
 
+=========================================================================================================================================
 Logic
 
 The core logic of the Appointment Scheduling System revolves around:
@@ -20,6 +21,7 @@ extending to the last day of the month.
 4. Error Handling: If a user attempts to schedule an appointment outside of the allowed range or if no available slots are found,
 an error message is displayed.
 
+============================================================================================================================================
 Models
 The system uses the following models:
 
@@ -50,6 +52,36 @@ Represents the error view model used for displaying error messages.
 
 ErrorMessage: A string containing the error message.
 RequestId: An optional string representing the request ID for debugging purposes.
+
+================================================================================================================================================
+
+Controller
+The main controller for handling appointment scheduling is ScheduleController
+
+Key Methods in ScheduleController
+1. Index(): Displays the list of scheduled appointments.
+2. Schedule(Patient newPatient): Handles the logic for scheduling a new appointment. It validates the patient's arrival time and 
+checks for available slots.
+3. SchedulePatient(Patient patient): Finds the optimal available slot for the patient and schedules the appointment.
+
+==============================================================================================================================================
+
+Views
+
+1. Index
+The Index view displays a list of scheduled appointments. It uses the appointments list to show details such as the patient's 
+name, the doctor's name, and the scheduled time.
+
+2. Error
+The Error view is used to display error messages when an invalid action occurs (e.g., scheduling an appointment outside of the 
+allowed range or when no available slots are found).
+
+It provides the user with feedback about what went wrong, such as the invalid date or time range.
+
+3. ErrorViewModel
+The ErrorViewModel is used to pass error-related data to the Error view. It contains the error message and, optionally, 
+a request ID for debugging purposes.
+
 
 
 
