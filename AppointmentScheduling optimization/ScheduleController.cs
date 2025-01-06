@@ -1,9 +1,8 @@
-﻿using AppointmentScheduling.Models;
+using AppointmentScheduling.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace SchedulingSystem.Controllers
-{
-    namespace SchedulingSystem.Controllers
+
+    namespace SchedulingSystems.Controllers
     {
         public class ScheduleController : Controller
         {
@@ -151,4 +150,3 @@ namespace SchedulingSystem.Controllers
 
         }
     }
-}
