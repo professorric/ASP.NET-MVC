@@ -1,8 +1,5 @@
 ﻿using AppointmentScheduling.Models;
 using Microsoft.AspNetCore.Mvc;
-using AppointmentScheduling.Models;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace SchedulingSystem.Controllers
 {
