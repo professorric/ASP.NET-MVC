@@ -1,5 +1,4 @@
-                                                    How to Navigate on the Project
-  Visit: https://youtu.be/XiMlon8TBEs
+
                               
                               Welcome to the AI-Based Predictive Healthcare Platform Course in ASP.NET and C#!
 
