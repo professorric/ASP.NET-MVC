@@ -53,6 +53,10 @@ Represents the error view model used for displaying error messages.
 ErrorMessage: A string containing the error message.
 RequestId: An optional string representing the request ID for debugging purposes.
 
+ErrorViewModel
+The ErrorViewModel is used to pass error-related data to the Error view. It contains the error message and, optionally, 
+a request ID for debugging purposes.
+
 ================================================================================================================================================
 
 Controller
@@ -60,9 +64,11 @@ The main controller for handling appointment scheduling is ScheduleController
 
 Key Methods in ScheduleController
 1. Index(): Displays the list of scheduled appointments.
-2. Schedule(Patient newPatient): Handles the logic for scheduling a new appointment. It validates the patient's arrival time and 
+      
+        Schedule(Patient newPatient): Handles the logic for scheduling a new appointment. It validates the patient's arrival time and 
 checks for available slots.
-3. SchedulePatient(Patient patient): Finds the optimal available slot for the patient and schedules the appointment.
+      
+        SchedulePatient(Patient patient): Finds the optimal available slot for the patient and schedules the appointment.
 
 ==============================================================================================================================================
 
@@ -78,9 +84,7 @@ allowed range or when no available slots are found).
 
 It provides the user with feedback about what went wrong, such as the invalid date or time range.
 
-3. ErrorViewModel
-The ErrorViewModel is used to pass error-related data to the Error view. It contains the error message and, optionally, 
-a request ID for debugging purposes.
+
 
 
 
