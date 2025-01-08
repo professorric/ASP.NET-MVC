@@ -62,23 +62,27 @@ a request ID for debugging purposes.
 Controller
 The main controller for handling appointment scheduling is ScheduleController
 
-Key Methods in ScheduleController
-1. Index(): Displays the list of scheduled appointments.
+
+
+1. ScheduleController
+        Key Methods in 
+
+        - Index(): Displays the list of scheduled appointments.
       
-        Schedule(Patient newPatient): Handles the logic for scheduling a new appointment. It validates the patient's arrival time and 
+        - Schedule(Patient newPatient): Handles the logic for scheduling a new appointment. It validates the patient's arrival time and 
 checks for available slots.
       
-        SchedulePatient(Patient patient): Finds the optimal available slot for the patient and schedules the appointment.
+        - SchedulePatient(Patient patient): Finds the optimal available slot for the patient and schedules the appointment.
 
 ==============================================================================================================================================
 
-Views
+Views: create a folder and name it Schedule and add 
 
-1. Index
+1. Index.cshtml
 The Index view displays a list of scheduled appointments. It uses the appointments list to show details such as the patient's 
 name, the doctor's name, and the scheduled time.
 
-2. Error
+2. Error.cshtml ( it is inside the Shared Folder )
 The Error view is used to display error messages when an invalid action occurs (e.g., scheduling an appointment outside of the 
 allowed range or when no available slots are found).
 
